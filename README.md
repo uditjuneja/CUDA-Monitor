@@ -1,11 +1,11 @@
 <h1>CUDA Monitor / NVIDIA-SMI GUI </h1>
-<h2>Currently - </h2> \n
-1. Notification when temperature reaches above 60* Celcius\n
-2. Shows notification for utilization and temperature\n
+<h2>Currently - </h2>
+1. Notification when temperature reaches above 60* Celcius
+2. Shows notification for utilization and temperature
 
-Add support for memory and multiple GPUs\n
+Add support for memory and multiple GPUs
 
 <h2> To-Do - </h2>
-1. Graphs\n
-2. Tkinter GUI a\n
+1. Graphs
+2. Tkinter GUI 
 3. Dynamic Update in menu list
