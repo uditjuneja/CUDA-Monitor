@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import threading
 import time
 import datetime
@@ -63,3 +64,10 @@ def all_checks(APPINDICATOR_ID, WARNING_CHECK_FLAG, WARNING_REFRESH_TIME, WARNIN
     if WARNING_CHECK_FLAG == 3:
         util_check = threading.Thread(target=launch_util_check, args=(WARNING_REFRESH_TIME, WARNING_UTILIZATION))
         util_check.start()
+=======
+from gi.repository import Notify as notify
+import threading
+
+def launch_temp_check():
+    pass
+>>>>>>> ae0a17dc2f93504475d7a4c24a40c32e342b7943

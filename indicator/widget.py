@@ -1,17 +1,24 @@
 import os
 import json
 import random
+<<<<<<< HEAD
 import time
+=======
+>>>>>>> ae0a17dc2f93504475d7a4c24a40c32e342b7943
 
 from gi.repository import Gtk as gtk
 from gi.repository import AppIndicator3 as appindicator
 from gi.repository import Notify as notify
+<<<<<<< HEAD
 from gi.repository import GObject
+=======
+>>>>>>> ae0a17dc2f93504475d7a4c24a40c32e342b7943
 
 from fetch import fetch_utilization, fetch_temperature
 import checks
 import notification
 
+<<<<<<< HEAD
 import threading
 
 def widget(APPINDICATOR_ID, REFRESH_TIME):
@@ -26,6 +33,15 @@ def widget(APPINDICATOR_ID, REFRESH_TIME):
     update.start()
 
     GObject.threads_init()
+=======
+def widget(APPINDICATOR_ID):
+    indicator = appindicator.Indicator.new(APPINDICATOR_ID, os.path.abspath('images/logo.jpeg'), appindicator.IndicatorCategory.SYSTEM_SERVICES)
+    indicator.set_status(appindicator.IndicatorStatus.ACTIVE)
+    indicator.set_menu(build_menu())
+
+    notify.init(APPINDICATOR_ID)
+
+>>>>>>> ae0a17dc2f93504475d7a4c24a40c32e342b7943
     gtk.main()
 
 def build_menu():
@@ -46,6 +62,7 @@ def build_menu():
     menu.show_all()
     return menu
 
+<<<<<<< HEAD
 def show_seconds(indicator, APPINDICATOR_ID, REFRESH_TIME):
     while True:
         time.sleep(REFRESH_TIME)
@@ -54,6 +71,8 @@ def show_seconds(indicator, APPINDICATOR_ID, REFRESH_TIME):
         GObject.idle_add(indicator.set_label, mention, APPINDICATOR_ID, priority=GObject.PRIORITY_DEFAULT)
 
 
+=======
+>>>>>>> ae0a17dc2f93504475d7a4c24a40c32e342b7943
 def quit(_):
     notify.uninit()
     gtk.main_quit()
